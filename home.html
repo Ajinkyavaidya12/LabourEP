@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Shopping Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bbdae7;
+        }
+        header {
+            background-color: #80aed4;
+            color: #121212;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #aab7f3;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: calc(25% - 40px); /* Adjusted width */
+            max-width: 300px;
+            text-align: center;
+        }
+        .card h2,
+        .card p {
+            margin: 0;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card button {
+            background-color: #d31919;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card button:hover {
+            background-color: #ec2e3e;
+        }
+        footer {
+            background-color: #9ba8e2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #search-form {
+            margin-top: 20px;
+        }
+        #search-input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #search-button {
+            padding: 8px 15px;
+            border: 1px solid #007bff;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LabourEP</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="user.html" target="_blank">User Register</a></li>
+            <li><a href="employee.html" target="_blank">Employee Register</a></li>
+            <li>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search by location, skill,mobile no, etc...">
+                    <button type="button" id="search-button">Search</button>
+                </form>
+            </li>
+            <li><a href="home.html" target="_blank">Home</a></li>
+            <li><a href="cleaner.html" target="_blank">Cleaner</a></li>
+            <li><a href="painter.html" target="_blank">Painter</a></li>
+            <li><a href="carpenter.html" target="_blank">Carpenter</a></li>
+            <li><a href="plumber.html" target="_blank">Plumber</a></li>
+            <li><a href="electrician.html" target="_blank">Electrician</a></li>
+            <li><a href="gardener.html" target="_blank">Gardener</a></li>
+            <li><a href="homeguard.html" target="_blank">Watchman</a></li>
+            <li><a href="childcare.html" target="_blank">ChildCare</a></li>
+            <li><a href="constructorworker.html" target="_blank">Constructor Worker</a></li>
+            <li><a href="payment.html" target="_blank">Payment</a></li>
+            <li><a href="faq.html" target="_blank">FAQs</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="card">
+            <a href="user.html">
+                <img src="cleaner1.avif" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Sachin Kumar</h2>
+                    <p>Skill: Cleaner</p>
+                    <p>Number: 9546409494</p>
+                    <p>Current Location: Wardha, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="carpenter1.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: John Doe</h2>
+                    <p>Skill: Carpenter</p>
+                    <p>Number: 9546459491</p>
+                    <p>Current Location: Nagpur, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="electrician1.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Virat Singh</h2>
+                    <p>Skill: Electrician</p>
+                    <p>Number: 7546459494</p>
+                    <p>Current Location: Amravti, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="painter1.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Manish Pandey</h2>
+                    <p>Skill: Painter</p>
+                    <p>Number: 9246459494</p>
+                    <p>Current Location: Pune, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="plumber1.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Joe Root</h2>
+                    <p>Skill: Plumber</p>
+                    <p>Current Location: Mumbai, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="child12.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Nidhi Pant</h2>
+                    <p>Number: 9844449494</p>
+                    <p>Current Location: Nagpur, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="gardener12.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: John Raut</h2>
+                    <p>Number: 9512449494</p>
+                    <p>Current Location: Nagpur, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="guard11.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Jofra Archer</h2>
+                    <p>Number: 9946449494</p>
+                    <p>Current Location: Wardha, India</p>
+                </div>
+            </a>
+        </div>
+    </main>
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+            var searchInput = document.getElementById('search-input').value.toLowerCase();
+            var cards = document.querySelectorAll('.card');
+
+            cards.forEach(function(card) {
+                var name = card.querySelector('h2').textContent.toLowerCase();
+                var skill = card.querySelector('p:nth-of-type(2)').textContent.toLowerCase();
+                var location = card.querySelector('p:nth-of-type(4)').textContent.toLowerCase();
+
+                if (name.includes(searchInput) || skill.includes(searchInput) || location.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

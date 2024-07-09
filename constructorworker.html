@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Worker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bbdae7;
+        }
+        header {
+            background-color: #b1d6f0;
+            color: #0e0d0d;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #aab7f3;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 25%;
+            height: 400px; /* Set a fixed height for the card */
+            max-width: 300px;
+            text-align: center;
+        }
+        .card h2 {
+            color: #333;
+        }
+        .card p {
+            color: #666;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card button {
+            background-color: #d31919;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card button:hover {
+            background-color: #ec2e3e;
+        }
+        footer {
+            background-color: #9ba8e2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Constructor Worker</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="user.html" target="_blank">User Register</a></li>
+            <li><a href="employee.html" target="_blank">Employee Register</a></li>
+            <li>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search by location, availability, etc...">
+                    <button type="button" id="search-button">Search</button>
+                </form>
+            </li>
+            <li><a href="home.html" target="_blank">Home</a></li>
+            <li><a href="cleaner.html" target="_blank">Cleaner</a></li>
+            <li><a href="painter.html" target="_blank">Painter</a></li>
+            <li><a href="carpenter.html" target="_blank">Carpenter</a></li>
+            <li><a href="plumber.html" target="_blank">Plumber</a></li>
+            <li><a href="electrician.html" target="_blank">Electrician</a></li>
+            <li><a href="gardener.html" target="_blank">Gardener</a></li>
+            <li><a href="homeguard.html" target="_blank">Watchman</a></li>
+            <li><a href="childcare.html" target="_blank">ChildCare</a></li>
+            <li><a href="constructorworker.html" target="_blank">Constructor Worker</a></li>
+            <li><a href="payment.html" target="_blank">Payment</a></li>
+            <li><a href="faq.html" target="_blank">FAQs</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker11.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Sachin Yadav</h2>
+                    <p>Number: 9546449494</p>
+                    <p>Current Location: Wardha, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker12.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: John Binny</h2>
+                    <p>Number: 9514449494</p>
+                    <p>Current Location: Nagpur, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker13.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Rohan Singh</h2>
+                    <p>Number: 9543449494</p>
+                    <p>Current Location: Amravati, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker14.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Manish Agrawal</h2>
+                    <p>Number: 9544448494</p>
+                    <p>Current Location: Pune, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker15.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Steve Root</h2>
+                    <p>Number: 9544449491</p>
+                    <p>Current Location: Mumbai, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker16.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Surya Yadav</h2>
+                    <p>Number: 9544749494</p>
+                    <p>Current Location: Satara, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker17.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Rohit Yadav</h2>
+                    <p>Number: 9544749490</p>
+                    <p>Current Location: Mumbai, India</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="user.html">
+                <img src="worker18.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>Name: Ishan Yadav</h2>
+                    <p>Number: 9542749494</p>
+                    <p>Current Location: Gujarat, India</p>
+                </div>
+            </a>
+        </div>
+    </main>
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+            var searchInput = document.getElementById('search-input').value.toLowerCase();
+            var cards = document.querySelectorAll('.card');
+
+            cards.forEach(function(card) {
+                var name = card.querySelector('h2').textContent.toLowerCase();
+                var location = card.querySelector('p:nth-of-type(2)').textContent.toLowerCase();
+
+                if (name.includes(searchInput) || location.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

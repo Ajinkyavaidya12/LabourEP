@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Shopping Website</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bbdae7;
+        }
+        header {
+            background-color: #b1d6f0;
+            color: #0e0d0d;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #aab7f3;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 25%;
+            height: 50%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .card h3 {
+            color: #333;
+        }
+        .card img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+        .card button {
+            background-color: #d31919;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card button:hover {
+            background-color: #ec2e3e;
+        }
+        footer {
+            background-color: #9ba8e2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carpenter</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="user.html" target="_blank">User Register</a></li>
+            <li><a href="employee.html" target="_blank">Employee Register</a></li>
+            <li>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search by location, avalibility, etc...">
+                    <button type="button" id="search-button">Search</button>
+                </form>
+            </li>
+        
+        
+            <li><a href="home.html" target="_blank">Home</a></li>
+            <li><a href="cleaner.html" target="_blank">Cleaner</a></li>
+            <li><a href="painter.html" target="_blank">Painter</a></li>
+            <li><a href="carpenter.html" target="_blank">Carpenter</a></li>
+            <li><a href="plumber.html" target="_blank">Plumber</a></li>
+            <li><a href="electrician.html" target="_blank">Electrician</a></li>
+            <li><a href="gardener.html" target="_blank">Gardener</a></li>
+            <li><a href="homeguard.html" target="_blank">Watchman</a></li>
+            <li><a href="childcare.html" target="_blank">ChildCare</a></li>
+            <li><a href="constructorworker.html" target="_blank">Constructor Worker</a></li>
+
+            <li><a href="payment.html" target="_blank">Payment</a></li>
+
+            
+
+
+            <li><a href="faq.html" target="_blank">FAQs</a></li>
+        </ul>
+    </nav>
+    <main>
+        <script>
+            document.getElementById('search-button').addEventListener('click', function() {
+                var searchInput = document.getElementById('search-input').value.toLowerCase();
+                var cards = document.querySelectorAll('.card');
+    
+                cards.forEach(function(card) {
+                    var name = card.querySelector('h2').textContent.toLowerCase();
+                    var location = card.querySelector('p:nth-of-type(2)').textContent.toLowerCase();
+    
+                    if (name.includes(searchInput) || location.includes(searchInput)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        </script>  
+        <style>
+        
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #bbdae7;
+            }
+            header {
+                background-color: #b1d6f0;
+                color: #0a0808;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            nav {
+                background-color: #aab7f3;
+                padding: 10px;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+            }
+            nav ul li {
+                margin-right: 20px;
+            }
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            nav ul li a:hover {
+                color: #ffc107;
+            }
+            main {
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .card {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                width: 25%;
+                max-width: 300px;
+                text-align: center;
+            }
+            .card h3 {
+                color: #333;
+            }
+            .card img {
+                max-width: 100%;
+                height: 200px; /* Set a fixed height for all images */
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .card p {
+                color: #666;
+            }
+            .card button {
+                background-color: #d31919;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .card button:hover {
+                background-color: #ec2e3e;
+            }
+            footer {
+                background-color: #9ba8e2;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        <!-- Add your featured products here -->
+    
+           
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter11.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Ayush Nigam</h2>
+                <p>Number: 9844441366</p>
+
+                <p>Current Location: Wardha, India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter12.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Omkar chavan</h2>
+                <p>Number: 9844449362</p>
+
+                <p>Current Location: Nagpur, India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter13.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Virat Sharma</h2>
+                <p>Number: 9834449366</p>
+
+                <p>Current Location:  Amravti, India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter14.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Manish Dhoni</h2>
+                <p>Number: 9842449366</p>
+
+                <p>Current Location: Pune, India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter15.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Joe Smith</h2>
+                <p>Number: 9814449366</p>
+
+                <p>Current Location: Mumbai,India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter16.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Kiran Sharma</h2>
+                <p>Number: 9844449966</p>
+
+                <p>Current Location: Satara,India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter17.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Shubham Sharma</h2>
+                <p>Number: 9844249366</p>
+
+                <p>Current Location: Satara,India</p>
+            </div>
+        </div>
+        <div class="card">
+            <a href="user.html">
+
+            <img src="carpenter18.jpg" alt="Image 1">
+            <div class="card-content">
+                <h2>Name: Kiran Yadav</h2>
+                <p>Number: 9844449362</p>
+
+                <p>Current Location: Satara,India</p>
+            </div>
+        </div>
+
+        
+    </main>
+    
+</body>
+</html>

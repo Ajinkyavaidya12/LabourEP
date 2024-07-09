@@ -1,0 +1,80 @@
+/* CSS styles for the app bar */
+header {
+    background-color: #80a9ed;
+    color: #141313;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Aligns items at the start and end of the flex container */
+    align-items: center;
+}
+
+.left-menu {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style-type: none;
+}
+
+.left-menu li {
+    display: inline; /* Display items horizontally */
+    margin-right: 20px; /* Add spacing between items */
+}
+
+.right-menu {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style-type: none;
+}
+
+.right-menu li {
+    display: inline; /* Display items horizontally */
+    margin-left: 20px; /* Add spacing between items */
+}
+
+/* Additional styling for links */
+.left-menu a,
+.right-menu a {
+    color: #0b0b0b;
+    text-decoration: none;
+}
+
+.left-menu a:hover,
+.right-menu a:hover {
+    color: #ffc107; /* Change color on hover */
+}
+
+/* CSS styles for card view */
+/* CSS styles for card view */
+/* CSS styles for card view */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Adjusted width to fit three cards in a row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-content {
+    padding: 10px 0;
+}
+
+/* Displaying cards in rows with three cards per row */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Distribute cards evenly in the row */
+}
+
+/* Resetting margin for the last card in each row */
+.card:nth-child(3n) {
+    margin-right: 0;
+}
+
